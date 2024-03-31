@@ -19,6 +19,8 @@ using static RepDesktop.Classes.Helper;
 using System.Text.Json;
 using RepDesktop.Models;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
+using System.Text.Json.Serialization;
 
 
 namespace RepDesktop
@@ -43,8 +45,10 @@ namespace RepDesktop
         public class Message
         {
             public date date { get; set; }
-            public rooms_count rooms_count { get; set; }
-            public windows_for_room windows_for_room { get; set; }
+
+            [JsonPropertyName("rooms_count")] public rooms_count rooms_count { get; set; }
+
+            [JsonPropertyName("windows_for_room")] public windows_for_room windows_for_room { get; set; }
             public windows windows { get; set; }
 
 
@@ -55,6 +59,7 @@ namespace RepDesktop
             public string description { get; set; }
 
         }
+        
         public class rooms_count
         {
             public int data { get; set; }
