@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище RepDbModelContainer" CdmEntityContainer="RepDbEntities2">
+    <EntitySetMapping Name="Flooor2ForMessage">
+      <EntityTypeMapping TypeName="RepDbModel.Flooor2ForMessage">
+        <MappingFragment StoreEntitySet="Flooor2ForMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Light" ColumnName="Light" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Floor1ForMessage">
+      <EntityTypeMapping TypeName="RepDbModel.Floor1ForMessage">
+        <MappingFragment StoreEntitySet="Floor1ForMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Light" ColumnName="Light" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Floor3forMessage">
+      <EntityTypeMapping TypeName="RepDbModel.Floor3forMessage">
+        <MappingFragment StoreEntitySet="Floor3forMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Light" ColumnName="Light" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flor4ForMessage">
+      <EntityTypeMapping TypeName="RepDbModel.Flor4ForMessage">
+        <MappingFragment StoreEntitySet="Flor4ForMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Light" ColumnName="Light" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message">
+      <EntityTypeMapping TypeName="RepDbModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="RoomsCount" ColumnName="RoomsCount" />
+          <ScalarProperty Name="DateDescription" ColumnName="DateDescription" />
+          <ScalarProperty Name="RoomsCountDescription" ColumnName="RoomsCountDescription" />
+          <ScalarProperty Name="WindowsDescriptiono" ColumnName="WindowsDescriptiono" />
+          <ScalarProperty Name="WindowsForRoomDescription" ColumnName="WindowsForRoomDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WindowsForRoom">
+      <EntityTypeMapping TypeName="RepDbModel.WindowsForRoom">
+        <MappingFragment StoreEntitySet="WindowsForRoom">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

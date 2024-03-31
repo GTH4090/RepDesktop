@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище RepDbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Flooor2ForMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="Light" Type="bit" />
+  </EntityType>
+  <EntityType Name="Floor1ForMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="Light" Type="bit" />
+  </EntityType>
+  <EntityType Name="Floor3forMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="Light" Type="bit" />
+  </EntityType>
+  <EntityType Name="Flor4ForMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="Light" Type="bit" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="int" />
+    <Property Name="RoomsCount" Type="int" />
+    <Property Name="DateDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="RoomsCountDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="WindowsDescriptiono" Type="nvarchar" MaxLength="50" />
+    <Property Name="WindowsForRoomDescription" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WindowsForRoom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageId" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Flooor2ForMessage_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="1" />
+    <End Role="Flooor2ForMessage" Type="Self.Flooor2ForMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flooor2ForMessage">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Floor1ForMessage_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="1" />
+    <End Role="Floor1ForMessage" Type="Self.Floor1ForMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Floor1ForMessage">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Floor3forMessage_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="1" />
+    <End Role="Floor3forMessage" Type="Self.Floor3forMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Floor3forMessage">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flor4ForMessage_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="1" />
+    <End Role="Flor4ForMessage" Type="Self.Flor4ForMessage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flor4ForMessage">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WindowsForRoom_Message">
+    <End Role="Message" Type="Self.Message" Multiplicity="1" />
+    <End Role="WindowsForRoom" Type="Self.WindowsForRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Message">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WindowsForRoom">
+        <PropertyRef Name="MessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище RepDbModelContainer">
+    <EntitySet Name="Flooor2ForMessage" EntityType="Self.Flooor2ForMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Floor1ForMessage" EntityType="Self.Floor1ForMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Floor3forMessage" EntityType="Self.Floor3forMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flor4ForMessage" EntityType="Self.Flor4ForMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WindowsForRoom" EntityType="Self.WindowsForRoom" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Flooor2ForMessage_Message" Association="Self.FK_Flooor2ForMessage_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="Flooor2ForMessage" EntitySet="Flooor2ForMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Floor1ForMessage_Message" Association="Self.FK_Floor1ForMessage_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="Floor1ForMessage" EntitySet="Floor1ForMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Floor3forMessage_Message" Association="Self.FK_Floor3forMessage_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="Floor3forMessage" EntitySet="Floor3forMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flor4ForMessage_Message" Association="Self.FK_Flor4ForMessage_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="Flor4ForMessage" EntitySet="Flor4ForMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WindowsForRoom_Message" Association="Self.FK_WindowsForRoom_Message">
+      <End Role="Message" EntitySet="Message" />
+      <End Role="WindowsForRoom" EntitySet="WindowsForRoom" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
