@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="83f64532467c4e6b88af956ecb9f2563" Name="Diagram1">
+        <EntityTypeShape EntityType="RepDbModel.Flooor2ForMessage" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RepDbModel.Floor1ForMessage" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RepDbModel.Floor3forMessage" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RepDbModel.Flor4ForMessage" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RepDbModel.Message" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RepDbModel.WindowsForRoom" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="RepDbModel.FK_Flooor2ForMessage_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="RepDbModel.FK_Floor1ForMessage_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="RepDbModel.FK_Floor3forMessage_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="RepDbModel.FK_Flor4ForMessage_Message" ManuallyRouted="false" />
+        <AssociationConnector Association="RepDbModel.FK_WindowsForRoom_Message" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
